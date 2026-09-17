@@ -1,0 +1,259 @@
+/* Variáveis para cores */
+:root {
+    --primary-color: #2563eb; 
+    --secondary-color: #1e40af; 
+    --text-color: #333;
+    --light-bg: #f9fafb;
+    --white: #ffffff;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --light-gray: #a3a3a3;
+    --contrast-color: #ff5e00;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background-color: #f3f4f6; 
+    padding: 0 10%;
+    margin-top: 60px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Coloca a imagem próxima ao texto */
+}
+
+.profile-pic {
+    width: 100%;
+    max-width: 450px; 
+    height: 450px; /* Mantém a proporção quadrada para fazer o círculo perfeito */
+    border-radius: 50%;
+    object-fit: cover; /* Faz a foto encaixar sem distorcer */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 8px solid var(--primary-color);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #6b7280;
+    margin-bottom: 2.5rem;
+    line-height: 1.4;
+}
+
+.hero p b {
+    color: var(--primary-color);
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: var(--light-gray);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--contrast-color);
+    transform:scale(1.03);
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: transparent;
+    color: var(--primary-color);
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    margin-top: 1.5rem;
+}
+
+.btn-small:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Sections */
+.section {
+    padding: 6rem 10%;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3.5rem;
+    color: var(--primary-color);
+}
+
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+/* Sobre */
+.sobre-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify; /* Melhora a leitura dos parágrafos maiores */
+    font-size: 1.15rem;
+    color: #4b5563;
+}
+
+/* Projetos */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem;
+}
+
+.projeto-card {
+    background-color: var(--white);
+    padding: 3.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projeto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.projeto-card h3 {
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+.projeto-card p {
+    color: #6b7280;
+}
+
+/* Contato */
+.contato-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.contato-content a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-links {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+footer {
+    background-color: #1f2937;
+    color: #9ca3af;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
